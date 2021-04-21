@@ -1,3 +1,4 @@
+import 'package:cyanitech/tutorial/LayoutLab.dart';
 import 'package:cyanitech/tutorial/tutorialPage.dart';
 import 'package:flutter/material.dart';
 
@@ -21,8 +22,16 @@ class NavDrawer extends StatelessWidget {
           ),
           ListTile(
             leading: Icon(Icons.input),
-            title: Text('Welcome'),
-            onTap: () => {},
+            title: Text('Layout Lab'),
+            onTap: () => {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => LayoutLab(),
+                  )
+              )
+
+            },
           ),
           ListTile(
             leading: Icon(Icons.verified_user),
